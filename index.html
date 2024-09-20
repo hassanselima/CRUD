@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>CRUD</title>
+  </head>
+  <body>
+    <div class="">
+      <div
+        class="d-flex flex-column justify-content-center align-items-center heading"
+      >
+        <h1 class="title">CRUD</h1>
+        <p class="func">Product Mangement System</p>
+      </div>
+      <div class="main">
+        <form class="form-box">
+          <div class="text-start mb-3">
+            <label for="prodName" class="form-label">Product Name:</label>
+            <input
+              type="text"
+              name="prodName"
+              id="prodName"
+              class="form-control form-input"
+              placeholder="Product Name..."
+              data-regexp="nameRe"
+            />
+            <div class="invalid-feedback">
+              Name must start with a capital letter and be at least 3 characters
+              long
+            </div>
+          </div>
+          <div class="text-start mb-3">
+            <label for="prodCat" class="form-label">Product Category:</label>
+            <input
+              type="text"
+              name="prodCat"
+              id="prodCat"
+              class="form-control form-input"
+              placeholder="Product Category..."
+              data-regexp="categoryRe"
+            />
+            <div class="invalid-feedback">
+              Category must start with a capital letter and be at least 3
+              characters long.
+            </div>
+          </div>
+          <div class="text-start mb-3">
+            <label for="prodPrice" class="form-label">Product Price:</label>
+            <input
+              type="number"
+              name="prodPrice"
+              id="prodPrice"
+              class="form-control form-input"
+              placeholder="Product Price..."
+              data-regexp="priceRe"
+            />
+            <div class="invalid-feedback">
+              Price must be a number with at least 3 digits.
+            </div>
+          </div>
+          <div class="text-start mb-3">
+            <label for="prodDesc" class="form-label"
+              >Product Description:</label
+            >
+            <textarea
+              name="prodDesc"
+              id="prodDesc"
+              class="form-control form-input"
+              placeholder="Product Description..."
+              data-name="description"
+              data-regexp="descriptionRe"
+            ></textarea>
+            <div class="invalid-feedback">
+              Description must start with a capital letter and be at least 4
+              characters long.
+            </div>
+          </div>
+          <div class="">
+            <button
+              class="btn btn-success px-5 mt-4 mb-3 text-white shadow rounded-5"
+              id="addBtn"
+            >
+              Add Product
+            </button>
+            <button
+              class="btn btn-warning px-5 mt-4 mb-3 rounded-5 shadow d-none"
+              id="updateBtn"
+            >
+              Update Product
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="bookmarked-sites">
+        <div class="search-box">
+          <input
+            type="text"
+            name="searchInput"
+            id="searchInput"
+            placeholder="Find Products..."
+            class="form-control shadow-sm"
+          />
+        </div>
+        <div class="table-responsive">
+          <table class="table shadow-sm">
+            <thead>
+              <tr>
+                <th scope="col">Index</th>
+                <th scope="col">Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Price</th>
+                <th scope="col">Description</th>
+                <th scope="col">Edit Product</th>
+                <th scope="col">Remove Product</th>
+              </tr>
+            </thead>
+            <tbody class="tableData" id="tableData"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
